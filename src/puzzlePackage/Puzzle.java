@@ -1,16 +1,18 @@
 package puzzlePackage;
 import java.awt.Image;
 
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-public abstract  class Puzzle {
+
+public class Puzzle extends JFrame{
 	//fields
 	private String name;
 	private Image image;
-	private String difficulty;
-	private int puzzleValue;;
-	public Puzzle(String name, Image image, int partsNumber) {
-		super();
+	private int difficulty;
+	public Puzzle(String name, Image image, int difficulty) {
 		this.name = name;
+		this.difficulty = difficulty;
 		this.image = image;
 	}
 	
@@ -24,6 +26,25 @@ public abstract  class Puzzle {
 		return true;
 	}
 	
+	public String getName(){
+		return this.name;
+	}
+
+	public Image getImage() {
+		return image;
+	}
+
+	public void setImage(Image image) {
+		this.image = image;
+	}
+
+	public int getDifficulty() {
+		return difficulty;
+	}
+
+	public void setDifficulty(int difficulty) {
+		this.difficulty = difficulty;
+	}
 	
 	
 
